@@ -1,0 +1,11 @@
+<div class="modal-background" *ngIf="selectedBook?.volumeInfo as book" (click)="onCloseModal()">
+
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="close-btn" (click)="onCloseModal()">X</div>
+    <div class="title">{{book.title}}</div>
+    <img class="img" src="{{book.imageLinks.thumbnail}}">
+    <div class="description">{{book.description}}</div>
+    <div class="add-to-wishlist" (click)="wishlistService.addToWishlist(selectedBook); onCloseModal()">ADD TO WISHLIST</div>
+  </div>
+
+</div>

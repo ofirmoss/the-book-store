@@ -1,0 +1,14 @@
+<div class="header">
+
+  <div class="header-left"></div>
+
+  <div class="header-middle">
+    <div class="logo" [routerLink]="['/search-book']">The Book Store</div>
+  </div>
+
+  <div class="header-right">
+    <i class="far fa-heart wishlist-btn" [routerLink]="['/wishlist']" title="Wishlist"></i>
+    <i class="fas fa-sign-out-alt logout" *ngIf="authService.isLoggedIn" (click)="authService.logout()" title="Logout"></i>
+  </div>
+
+</div>

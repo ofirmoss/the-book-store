@@ -1,0 +1,12 @@
+<div class="search-book">
+  <input class="search-input" type="text" placeholder="Search books" [(ngModel)]="query" (input)="searchBooks()">
+
+  <div class="books-container" *ngIf="books?.length">
+    <div class="book-card" *ngFor="let book of books" (click)="bookSelected(book)">
+      <img class="book-img" src="{{book.volumeInfo.imageLinks.thumbnail}}">
+    </div>
+  </div>
+</div>
+
+
+<app-modal *ngIf="modalOpen" (closeModal)="modalOpen = false"></app-modal>

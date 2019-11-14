@@ -1,0 +1,17 @@
+<div class="wishlist">
+  <div class="books-container" *ngIf="wishlist?.length">
+    <div class="wishlist-card" *ngFor="let book of wishlist">
+      <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}">
+      <div class="book-details">
+        <div class="title"></div>
+        <div class="description"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-wishlist" *ngIf="!wishlist?.length">
+    Sorry, your wishlist is empty.
+  </div>
+
+
+</div>
