@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../../assets/imgs/bookshelf.jpg");
+  // background-image: url("../../../assets/imgs/bookshelf.jpg");
   min-height: 100vh;
   background-size: cover;
   position: relative;
@@ -14,8 +14,9 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
-  position: absolute;
-  top: 50px;
+  // position: absolute;
+  // top: 50px;
+  margin-top: 50px;
 
   &:focus{
     outline: none;
@@ -24,7 +25,7 @@
 
 .books-container {
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   // padding: 50px;
 }
@@ -34,7 +35,8 @@
   width: 200px;
   height: 250px;
   margin: 15px;
-  margin-top: 150px;
+  margin-top: 50px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
 
   .book-img {
     width: 100%;

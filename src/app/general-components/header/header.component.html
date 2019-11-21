@@ -1,6 +1,6 @@
 <div class="header">
 
-  <div class="header-left"></div>
+  <div class="header-left">{{authService.getCurrentUser().username}}</div>
 
   <div class="header-middle">
     <div class="logo" [routerLink]="['/search-book']">The Book Store</div>

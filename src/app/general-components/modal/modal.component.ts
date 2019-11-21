@@ -11,17 +11,30 @@ export class ModalComponent implements OnInit {
 
   @Output() closeModal = new EventEmitter();
   selectedBook;
+  isBookInWishlist;
 
   constructor(public booksService: BooksService, public wishlistService: WishlistService) {
     this.selectedBook = this.booksService.selectedBook;
+    this.isBookInWishlist = this.wishlistService.isBookInWishlist(this.selectedBook.id);
    }
 
   ngOnInit() {
-    console.log(this.selectedBook);
   }
 
   onCloseModal() {
     this.closeModal.emit();
+  }
+
+  toggleWishlist() {
+    if (this.isBookInWishlist) {
+      this.wishlistService.removeFromWishlist(this.selectedBook.id);
+    } else {
+      this.wishlistService.addToWishlist(this.selectedBook);
+    }
+    this.isBookInWishlist = !this.isBookInWishlist;
+    setTimeout(() => {
+      this.onCloseModal();
+    }, 600);
   }
 
 }

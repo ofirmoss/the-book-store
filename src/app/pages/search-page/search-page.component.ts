@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../../services/books.service';
+import { WishlistService } from '../../services/wishlist.service';
 
 @Component({
   selector: 'search-page',
@@ -13,7 +14,8 @@ export class SearchPageComponent implements OnInit {
   modalOpen = false;
 
   constructor(
-    private booksService: BooksService
+    private booksService: BooksService,
+    private wishlistService: WishlistService
   ) { }
 
   ngOnInit() {

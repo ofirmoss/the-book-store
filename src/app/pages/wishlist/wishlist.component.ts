@@ -12,10 +12,9 @@ export class WishlistComponent implements OnInit {
 
   constructor(private wishlistService: WishlistService) {
     this.wishlist = this.wishlistService.getWishlist( );
-   }
+  }
 
   ngOnInit() {
-    console.log(this.wishlist);
   }
 
 }
