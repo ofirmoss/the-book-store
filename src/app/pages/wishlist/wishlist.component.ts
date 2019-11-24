@@ -17,4 +17,8 @@ export class WishlistComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeFromList(book) {
+    this.wishlistService.removeFromWishlist(book.id);
+  }
+
 }

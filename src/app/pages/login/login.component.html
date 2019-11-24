@@ -2,15 +2,17 @@
 <div class="login-page">
 
   <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+        <div class="title">
+          Welcome to the Book Store
+        </div>
 
-      <div>
-        <!-- <label for="username">
-          userName
-        </label> -->
-        <input id="username" type="text" formControlName="username">
-      </div>
+        <!-- <label class="label" for="username"> -->
+          <!-- userName -->
+          <input formControlName="username"  class="input" id="username" name="username" type="text" placeholder="username">
+        <!-- </label> -->
 
-    <button class="button" type="submit">Login</button>
+
+    <button class="button" type="submit" required>Login</button>
 
   </form>
 

@@ -3,4 +3,60 @@
 html,body {
   font-family: 'Roboto', sans-serif;
   background: #4a3b3b;
+  background:linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url("https://raw.githubusercontent.com/Poojavpatel/BookStoreApp/master/img/b.jpg");
+  background-size: cover;
+  // background-position: 50% 50%;
+}
+
+
+::-webkit-scrollbar-track {
+  border: none;
+  border-style: none;
+  border-radius: 10px;
+  border-color: transparent;
+  outline: none;
+  outline-style: none;
+  box-shadow: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border: none;
+  border-style: none;
+  border-radius: 10px;
+  border-color: transparent;
+  outline: none;
+  outline-style: none;
+  box-shadow: 0px;
+}
+
+::-webkit-scrollbar:hover {
+  pointer-events: all;
+  z-index: 99999 !important;
+  border: none;
+  border-style: none;
+  border-radius: 10px;
+  border-color: transparent;
+  outline: none;
+  outline-style: none;
+  box-shadow: 0px;
+  /* box-shadow: inset 0 0 6px rgba(1, 0, 0, 0.3); */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:  rgb(72, 94, 111);;
+  width: 5px;
+  height: 0.4em;
+  /* outline: 1px solid slategrey; */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(34, 42, 54);
+}
+
+
+body::-webkit-scrollbar:horizontal {
+  height: 0.4em;
 }

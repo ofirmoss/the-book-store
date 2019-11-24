@@ -9,11 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router: Router) { }
+  showHeader;
+
+  constructor(public authService: AuthService, private router: Router) {
+    router.events.subscribe((url: any) => url.url ? this.showHeader = (url.url !== '/login') : null );
+   }
 
   ngOnInit() {
     console.log(this.authService.getCurrentUser())
-    this.handleUser()
+    this.handleUser();
   }
 
   handleUser() {

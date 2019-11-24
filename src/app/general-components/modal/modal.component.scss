@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #8080807a;
+  background: #555555c0;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +20,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgb(34, 43, 49, 0.8);
+  color: white;
 }
 
 .close-btn {
@@ -50,9 +52,9 @@
 .add-to-wishlist {
   width: 200px;
   padding: 15px;
-  background: rgb(39, 218, 63);
+  background: rgba(39, 218, 63, 0.671);
   &:hover {
-    background: rgb(18, 223, 45);
+    background: rgba(20, 167, 40, 0.849);
   }
   cursor: pointer;
   border-radius: 10px;

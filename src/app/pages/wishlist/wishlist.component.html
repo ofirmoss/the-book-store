@@ -1,6 +1,7 @@
 <div class="wishlist">
   <div class="wishlist-container" *ngIf="wishlist?.length">
     <div class="wishlist-card" *ngFor="let book of wishlist">
+      <i class="remove-btn fas fa-trash-alt" (click)="removeFromList(book)"></i>
       <img class="img" src="{{book.volumeInfo.imageLinks.smallThumbnail}}">
       <div class="book-details">
         <div class="title">{{book.volumeInfo.title}}</div>

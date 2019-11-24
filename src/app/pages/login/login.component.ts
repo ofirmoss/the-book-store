@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      username: '',
+      username: [''],
+      // username: new FormControl(''),
     });
    }
 
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(user) {
-    if (!this.loginForm.dirty) { return };
+    // if (!this.loginForm.dirty) { return };
     this.authService.login(user)
     this.loginForm.reset();
     this.router.navigate(['/search-book']);
