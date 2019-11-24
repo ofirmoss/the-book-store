@@ -1,4 +1,4 @@
-@import '../../../assets/variables.scss';
+@import "../../../assets/variables.scss";
 
 .login-page {
   display: flex;
@@ -27,7 +27,8 @@
   // justify-content: center;
 
   .title {
-    font-size: 25px;
+    font-family: "Courgette", cursive;
+    font-size: 34px;
     margin-bottom: 150px;
   }
 
@@ -74,5 +75,9 @@
 @media screen and (max-width: $media-mobile) {
   .login-form {
     width: 85%;
+
+    .title {
+      font-size: 25px;
+    }
   }
 }

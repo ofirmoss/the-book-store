@@ -34,7 +34,7 @@ export class ModalComponent implements OnInit {
     this.isBookInWishlist = !this.isBookInWishlist;
     setTimeout(() => {
       this.onCloseModal();
-    }, 600);
+    }, 300);
   }
 
 }

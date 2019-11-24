@@ -23,6 +23,6 @@ export class WishlistService {
   }
 
   isBookInWishlist(id) {
-    return this.wishlist.some(book => book.id === id)
+    return this.wishlist.some(book => book.id === id);
   }
 }
