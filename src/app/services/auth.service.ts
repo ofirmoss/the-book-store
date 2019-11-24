@@ -15,6 +15,7 @@ export class AuthService {
     this.user = newUser;
     this.isLoggedIn = true;
     localStorage.setItem('isLoggedIn', `${this.isLoggedIn}`);
+    localStorage.setItem('user', JSON.stringify(this.user));
   }
 
   checkIfUserLoggedIn() {
@@ -23,7 +24,7 @@ export class AuthService {
   }
 
   getCurrentUser() {
-   return this.user;
+   return JSON.parse(localStorage.getItem('user'));
   }
 
   logout() {

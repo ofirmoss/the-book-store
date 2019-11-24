@@ -1,3 +1,5 @@
+@import '../../../assets/variables.scss';
+
 .wishlist-container {
   padding: 50px 100px;
 }
@@ -43,4 +45,24 @@
     }
   }
 
+}
+
+@media screen and (max-width: $media-mobile) {
+  .wishlist-container {
+    padding: 50px 0;
+  }
+
+  .wishlist-card {
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+
+    .remove-btn {
+      top: 10px;
+    }
+
+    .img, .title {
+      margin-bottom: 20px;
+    }
+  }
 }

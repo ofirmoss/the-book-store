@@ -1,3 +1,5 @@
+@import '../../../assets/variables.scss';
+
 .login-page {
   display: flex;
   flex-direction: column;
@@ -66,5 +68,11 @@
     &:hover {
       background: #8faee7;
     }
+  }
+}
+
+@media screen and (max-width: $media-mobile) {
+  .login-form {
+    width: 85%;
   }
 }
