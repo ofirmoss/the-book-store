@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-image: url("../../../assets/imgs/bookshelf.jpg");
   min-height: 100vh;
   background-size: cover;
   position: relative;
@@ -17,8 +16,6 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
-  // position: absolute;
-  // top: 50px;
   margin-top: 50px;
 
   &:focus{
@@ -30,7 +27,6 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  // padding: 50px;
 }
 
 .book-card {
@@ -47,10 +43,6 @@
     border-radius: 10px;
   }
 }
-
-// .book-card:not(:first-child) {
-//   margin-left: 20px;
-// }
 
 @media screen and (max-width: $media-mobile) {
 

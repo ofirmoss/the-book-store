@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.formBuilder.group({
       username: [''],
-      // username: new FormControl(''),
     });
    }
 
@@ -23,11 +22,10 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(user) {
-    // if (!this.loginForm.dirty) { return };
-    this.authService.login(user)
-    this.loginForm.reset();
+    if (!this.loginForm.valid) { return };
+    this.authService.login(user);
     this.router.navigate(['/search-book']);
-    console.log(this.loginForm, this.authService.user)
+    // console.log(this.loginForm, this.authService.user)
   }
 
 }

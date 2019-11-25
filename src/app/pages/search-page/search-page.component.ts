@@ -19,9 +19,6 @@ export class SearchPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.booksService.getBook(this.query).subscribe(({response}) => {
-    //   this.books = response.items;
-    // });
   }
 
   searchBooks() {
@@ -34,6 +31,9 @@ export class SearchPageComponent implements OnInit {
   bookSelected(book) {
     this.booksService.bookSelected(book);
     this.modalOpen = true;
+  }
+
+  ngOnDestroy() {
   }
 
 }
